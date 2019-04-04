@@ -1,45 +1,75 @@
 body {
-    width: 100%;
     font-family: 'Work Sans', sans-serif;
     background: #F8F7F5;
     background: -webkit-linear-gradient(top left, #F8F7F5, #C4C4C4);
     background: -moz-linear-gradient(top left, #F8F7F5, #C4C4C4);
     background: linear-gradient(top left, #F8F7F5, #C4C4C4);
+    background-image: url("../media/photo5.jpg")
+}
+
+.image {
+    border: 2px solid red;
 }
 .header {
-    position: fixed;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
+    position: relative;
+    width: 80%;
+    height: auto;
+    /*height: 700px;*/
+    margin: 0 auto;
+    width: 90%;
     background:-webkit-radial-gradient(bottom left, #000000, #FF0000);
     background: -moz-radial-gradient(bottom left, #000000, #FF0000);
     background: radial-gradient(bottom left, #000000, #FF0000);
+    opacity: 0.85;
     z-index: 5;
+    color: white;
 }
-
+.header img {
+    display: block;
+    margin: 0 auto;
+}
 .logo-header {
-    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 96px;
     color: white;
 }
 
-.navbar {
-    position: relative;
-    text-align: right;
-    margin-right: 15px;
-
+.details {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
 }
 
-.buttons {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.details p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar a {
+    padding-right: 8px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    border-right: 1px solid white;
+}
+
+.navbar .checkout {
+    border-right: none;
+}
+.navbar a:hover {
+    color: gray;
 }
 
 .main-content {
     margin-top: 125px;
+    padding: 0 20px;
 }
 
 .lead-info {
@@ -56,3 +86,69 @@ body {
       opacity: 0;
     }
   }
+
+.blurb {
+    text-align: center;
+}
+
+.blurb h3 {
+    padding: 0 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.slick-images {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.secondary-info {
+    text-align: center;
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buy-sell {
+    text-align: center;
+    font-size: 28px;
+    animation: blinker 3s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    background:-webkit-radial-gradient(bottom left, #000000, #FF0000);
+    background: -moz-radial-gradient(bottom left, #000000, #FF0000);
+    background: radial-gradient(bottom left, #000000, #FF0000);
+}
+
+.footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.location {
+    position: relative;
+    text-align: left;
+    margin-left: 15px;
+}
+.social {
+    position: relative;
+    text-align: right;
+    margin-right: 15px;
+
+}
