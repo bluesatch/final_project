@@ -73,7 +73,23 @@ body {
 }
 
 .lead-info {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background: #c4c4c4;
+    opacity: 0.85;
+    z-index: 5;
     text-align: center;
+}
+
+.lead-info img {
+    display: block;
+    margin: 0 auto;
+}
+
+.lead-info h1 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .blinking {
