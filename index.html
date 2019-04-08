@@ -92,9 +92,9 @@
         <div class="secondary-info">
             <h3>We also have CDs, Movies, Books, Buttons, and other Music Merch!</h3>
             <div class="images">
-                <img class="image" src="media/photo2.jpg" alt="image10" width="300" height="200">
-                <img class="image" src="media/photo3.jpg" alt="image11" width="300" height="200">
-                <img class="image" src="media/photo1.jpg" alt="image12" widht="300" height="200">
+                <img class="sec-img" src="media/photo2.jpg" alt="image10" width="300">
+                <img class="sec-img" src="media/photo3.jpg" alt="image11" width="300">
+                <img class="sec-img" src="media/photo1.jpg" alt="image12" width="300">
             </div>
             <h2 class="buy-sell">Crazy enough to get rid of those records?! We'll buy them from you and get them off your hand!</h2>
         </div>
@@ -127,7 +127,9 @@
             $('.slick-images').slick({
             infinite: true,
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
             centerMode: true,
             centerPadding: '40px'
             });

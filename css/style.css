@@ -25,21 +25,24 @@ a:hover {
     color: #fffff0;
 }
 .header img {
+    max-width: 100%;
+    min-width: 60%;
     display: block;
     margin: 0 auto;
+    height: auto;
 }
 .logo-header {
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    font-size: 96px;
+    font-size: calc(48px + (96 - 48) * ((100vw - 300px) / (1600 - 300)));
     color: #fffff0;
 }
 
 .details {
     margin: 0 auto;
     text-align: center;
-    font-size: 24px;
+    font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .details p {
@@ -55,7 +58,7 @@ a:hover {
 .navbar a {
     padding-right: 30px;
     padding-left: 30px;
-    font-size: 24px;
+    font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
     text-decoration: none;
     border-right: 1px solid #fffff0;
 }
@@ -126,16 +129,19 @@ a:hover {
 
 .features {
     text-align: center;
-    font-size: 24px;
+    font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .slick-images {
-    width: 80%;
+    max-width: 80%;
+    min-width: 40%;
     margin: 0 auto;
 }
 
+
 figcaption {
     text-align: center;
+    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .secondary-info {
@@ -149,13 +155,30 @@ figcaption {
     text-align: center;
     font-size: 24px;
 }
-}
+
 
 .images {
     display: flex;
     justify-content: space-around;
+    max-height: 200px;
 }
 
+.image {
+    max-width: 100%;
+    min-width: 40%;
+    height: auto;
+}
+
+.sec-img {
+    max-width: 30%;
+    min-width: 10%;
+}
+
+@media (max-width: 900px) {
+    .images {
+        flex-direction: column; /*working on making image responsive */
+    }
+}
 .buy-sell {
     text-align: center;
     font-size: 24px;
@@ -186,6 +209,7 @@ figcaption {
 .footer p {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .location {
@@ -200,9 +224,10 @@ figcaption {
 
 }
 
+
 .social-media {
-    padding-right: 40px;
-    font-size: 36px;
+    padding-right: 30px;
+    font-size: calc(8px + (36 - 8) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .products {
