@@ -25,9 +25,9 @@
                 </div>
             </nav>
         </header>
-        <main class="products">
+        <main class="products"">
             <h2 class="featured-products">Featured Albums For the Month!</h2>
-            <div class="albums">
+            <div class="albums" id="output">
                 <div class="content">
                     <img class="image" src="media/diana.jpg" alt="image1" width="300" height="400">
                     <figcaption>Diana Ross | Diana | $10.00</figcaption>
@@ -83,5 +83,27 @@
             </div>
         </footer>
     </div>
+    <script>
+        function getData(url) {
+            fetch(url).then(response => {
+                return response.json()
+            })
+            .then(data => {
+                let output = document.getElementById("output");
+                output.innerHTML = ""
+                for(let i = 0; i < data.length; i++) {
+                    output.innerHTML += `
+                        <div class="content">
+                            <img class="image" src="`+ data[i].img +`" alt="image1" width="300" height="400">
+                            <figcaption>`+ data[i].artist + ` | `+ data[i].album +` | `+ `$`+ data[i].price +`</figcaption>
+                        </div>
+                    `
+                    console.log(data[i])
+                }
+            })
+        }
+        getData("http://localhost:8000/api/product");
+
+    </script>
 </body>
 </html>

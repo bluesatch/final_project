@@ -1,0 +1,7 @@
+Table for products
+
+product_id (int)
+name VARCHAR (20)
+album VARCHAR (20)
+label VARCHAR (20)
+price FLOAT (5,2)
